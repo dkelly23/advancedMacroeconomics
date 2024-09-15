@@ -1,0 +1,306 @@
+
+% ==============================================================================
+%% Packages
+% ==============================================================================
+\RequirePackage{tikz}
+\RequirePackage{xeCJK}
+\RequirePackage{xcolor}
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+\RequirePackage{verbatim}
+\RequirePackage{listings}
+
+% Remove Navigation Symbols
+\beamertemplatenavigationsymbolsempty
+
+% Default Font
+%\usefonttheme{serif}
+%\usepackage{mathptmx}
+
+%\usepackage[T1]{fontenc}
+%\usepackage{tgbonum}
+
+% ==============================================================================
+%% Colors
+% ==============================================================================
+%% Define colors
+\definecolor{main}{HTML}{5e002b}
+\definecolor{background}{RGB}{255, 255, 255}
+\definecolor{text}{RGB}{64,64,64}
+\definecolor{alert}{RGB}{194, 31, 48}
+\definecolor{example}{RGB}{21, 67, 174}
+
+\definecolor{codecomment}{RGB}{36, 128, 103}
+\definecolor{codekeyword}{RGB}{238, 63, 77}
+\definecolor{codestring}{RGB}{19, 72, 87}
+\definecolor{block}{HTML}{378518}
+\definecolor{subtitle}{RGB}{75, 75, 75}
+
+\definecolor{href}{RGB}{107, 164, 184}
+
+%% Set colors
+\setbeamercolor{titlelike}{fg=background}
+\setbeamercolor{frametitle}{fg=main}
+\setbeamercolor{framesubtitle}{fg=subtitle}
+\setbeamercolor{head}{bg=main}
+\setbeamercolor{author}{fg=white}
+\setbeamercolor{institute}{fg=white}
+\setbeamercolor{date}{fg=white}
+\setbeamercolor{acknowledgement}{parent={titlelike}}
+
+\setbeamercolor{normal text}{fg=text, bg=background}
+\setbeamercolor{alerted text}{fg=alert}
+\setbeamercolor{example text}{fg=example}
+
+\setbeamercolor{footline}{fg=background, bg=main}
+
+\setbeamercolor{block title}{bg=block, fg=background}
+\setbeamercolor{block body}{bg=block!10!background, fg=block!5!text}
+
+\setbeamercolor{block title alerted}{bg=alert, fg=background}
+\setbeamercolor{block body alerted}{bg=alert!10!background, fg=alert!5!text}
+
+\setbeamercolor{block title example}{bg=example, fg=background}
+\setbeamercolor{block body example}{bg=example!10!background, fg=example!5!text}
+
+\setbeamercolor{itemize item}{fg=main}
+\setbeamercolor{itemize subitem}{fg=main}
+
+\setbeamercolor{enumerate item}{fg=main!70!black}
+\setbeamercolor{enumerate subitem}{fg=main!70!black}
+
+\setbeamercolor{description item}{fg=main!70!black}
+\setbeamercolor{description subitem}{fg=main!70!black}
+
+\setbeamercolor{caption name}{fg=text}
+
+\setbeamercolor{section in toc}{fg=main}
+\setbeamercolor{subsection in toc}{fg=main}
+\setbeamercolor{section number projected}{bg=main}
+\setbeamercolor{subsection number projected}{bg=main}
+
+\setbeamercolor{bibliography item}{fg=main}
+\setbeamercolor{bibliography entry author}{fg=main!70!black}
+\setbeamercolor{bibliography entry title}{fg=main}
+\setbeamercolor{bibliography entry location}{fg=main}
+\setbeamercolor{bibliography entry note}{fg=main}
+
+
+% ==============================================================================
+%% Fonts
+% ==============================================================================
+%% Set fonts
+
+\usefonttheme{professionalfonts}
+
+\setbeamerfont{title}{size=\Large}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{author}{size=\large}
+\setbeamerfont{institute}{size=\normalsize}
+\setbeamerfont{date}{size=\normalsize}
+\setbeamerfont{acknowledgement}{size=\huge}
+
+\setbeamerfont{sectiontitle}{size=\huge}
+\setbeamerfont{frametitle}{size=\Large}
+\setbeamerfont{framesubtitle}{size=\small}
+\setbeamerfont{normal text}{family=\rmfamily}
+
+\setbeamerfont{footline}{size=\scriptsize}
+\setbeamerfont{footnote}{size=\tiny}
+
+\setbeamerfont{caption name}{shape=\bfseries}
+
+\setbeamerfont{bibliography item}{size=\small}
+\setbeamerfont{bibliography entry author}{size=\small}
+\setbeamerfont{bibliography entry title}{size=\small}
+\setbeamerfont{bibliography entry location}{size=\small}
+\setbeamerfont{bibliography entry note}{size=\small}
+
+
+% ==============================================================================
+%% Entities
+% ==============================================================================
+%% Set blocks
+\setbeamertemplate{blocks}[rounded]
+
+%% Set points
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{itemize subitem}[square]
+\setbeamertemplate{itemize subsubitem}{\ensuremath{\circ}}
+
+%% Set table of contents
+\setbeamertemplate{section in toc}[square]
+\setbeamertemplate{subsection in toc}[circle]
+
+%% Set code block style
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{codecomment},
+    keywordstyle=\color{codekeyword},
+    stringstyle=\color{codestring},
+    numberstyle=\tiny\color{main},
+    basicstyle=\ttfamily\scriptsize,
+    numbersep=5pt,
+    tabsize=4,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+}
+\lstset{style=mystyle}
+
+
+% ==============================================================================
+%% General Layout
+% ==============================================================================
+%% Title Page
+\setbeamertemplate{title page}{
+    \begin{picture}(0,0)
+		\put(-21.5, -222){\includegraphics[width=\paperwidth]{Imágenes/title_bg.png}}
+	\end{picture}
+	\begin{center}
+				\vspace{25pt}
+				\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par
+				\vspace{8pt}
+				\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+				\vspace{15pt}
+				\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par
+				\vspace{0pt}
+				\usebeamerfont{institute}\usebeamercolor[fg]{institute}\insertinstitute\par
+                 \vspace{10pt}
+                \usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate
+	\end{center}
+}
+			
+
+%% Section page
+\AtBeginSection[]{
+    \begin{frame}[plain]
+    \begin{picture}(0,0)
+        \put(-25, -154.5){\includegraphics[width=1.01\paperwidth]{Imágenes/section_title.png}}
+    \end{picture}
+    		\put(0,10){
+        		\begin{minipage}{300pt}
+        			\usebeamerfont{title}\usebeamercolor[fg]{title}\insertsectionhead\par%
+        		\end{minipage}
+        	}
+  \end{frame}
+}
+
+%% Headline
+%\setbeamertemplate{headline}{
+    % If not the title page
+ %   \ifnum\value{framenumber}>0
+  %      \vspace{242pt}\hspace{225pt}\includegraphics[width=125pt]{imagenes/logo_colmex.png}
+   % \fi
+%}
+
+%% Frame title
+\setbeamertemplate{frametitle}{
+    % If not the title page
+    \ifnum\value{framenumber}>0
+        \vspace{10pt}\hspace{-12pt}
+        \usebeamerfont{frametitle}
+        \usebeamercolor{frametitle}
+        \insertframetitle \\
+        \vspace{3pt}\hspace{-5pt}
+        \usebeamerfont{framesubtitle}
+        \insertframesubtitle
+    \fi
+}
+
+%% Footline
+\setbeamertemplate{footline}
+{
+    \leavevmode
+    \hbox{
+    \begin{beamercolorbox}[wd=.21\paperwidth,ht=2.25ex,dp=1ex,center]{footline}
+      \usebeamerfont{footline}\insertshortauthor
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=.55\paperwidth,ht=2.25ex,dp=1ex,center]{footline}
+      \usebeamerfont{footline}\insertsubsectionhead
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=.21\paperwidth,ht=2.25ex,dp=1ex,center]{footline}
+      \usebeamerfont{footline}\insertframenumber{} / \inserttotalframenumber
+    \end{beamercolorbox}}
+    \vskip0pt
+}
+
+%% Margin
+\setbeamersize{text margin left=0.75cm, text margin right=0.75cm}
+\setlength{\leftmargini}{0.75cm}
+
+
+
+
+
+%% Commands
+\newcommand\blue[1]{{\color{Cerulean}{#1}}}
+\newcommand\orange[1]{{\color{RedOrange}{#1}}}
+\newcommand\green[1]{{\color{ForestGreen}{#1}}}
+
+
+\newcommand\pd[2]{\dfrac{\partial #1}{\partial #2}}
+
+\newcommand\dsum[2]{\displaystyle\sum_{#1}^{#2}}
+
+\newcommand\mn[1]{\mathbf{#1}}
+
+\newcommand\plim[1]{plim\left[#1\right]}
+
+\newcommand\hbeta[1]{\hat{\beta_{#1}}}
+\newcommand\hdelta[1]{\hat{\delta_{#1}}}
+
+\newcommand\un[2]{\underset{#2}{#1}}
+
+\newcommand\ols[1]{{\color{Cerulueon}{OLS#1}}}
+\newcommand\iv[1]{{\color{Ceruleon}{IV#1}}}
+\newcommand\stata[1]{\textbf{\color{red}{Comando Stata:}} \textit{#1}}
+
+\newcommand\eq[1]{\begin{equation}
+#1
+\end{equation}}
+
+
+\newcommand\E[1]{E\left[#1\right]}
+\newcommand\Var[1]{Var\left[ #1 \right]}
+\newcommand\Cov[1]{Cov\left[ #1 \right]}
+
+\newcommand\X[0]{\mn{X}}
+\newcommand\x[0]{\mn{x}}
+\newcommand\Y[0]{\mn{Y}}
+\newcommand\y[0]{\mn{y}}
+\newcommand\Z[0]{\mn{Z}}
+\newcommand\z[0]{\mn{z}}
+
+\renewcommand{\l}[0]{\lbrace}
+\renewcommand{\r}[0]{\rbrace}
+
+\newcommand\lp{\left(}
+\newcommand\rp{\right)}
+
+\newcommand\lb{\left[}
+\newcommand\rb{\right]}
+
+\renewcommand{\L}[0]{\mathcal{L}}
+\renewcommand{\l}{\lambda}
+
+\logo{\includegraphics[width=.1\textwidth]{../../../../../../El Colegio de México/Séptimo Semestre/Macroeconomía Avanzada/Notas/Presentaciones/3. OLG/Imágenes/logo.png} }
+
+\newcommand\definicion[3]{\begin{exampleblock}{Definition #1}{#2\footnote{#3}}\end{exampleblock}}
+
+\newcommand\teorema[3]{\begin{alertblock}{Theorem #1}{#2\footnote{#3}}\end{alertblock}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

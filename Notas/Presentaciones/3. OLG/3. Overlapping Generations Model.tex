@@ -1,0 +1,197 @@
+\documentclass[10pt,usenames,dvipsnames]{beamer}
+\usepackage{swjtu}
+\usepackage[]{biblatex}
+%\setbeamertemplate{bibliography item}{\insertbiblabel}
+\addbibresource{bibliography.bib}
+\usepackage[spanish]{babel}
+\usepackage{amsmath} 
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{xcolor}
+%\usepackage{mdframed}
+\usepackage{inputenc}
+\usefonttheme{professionalfonts}
+%\usefonttheme{serif}
+\usepackage{graphicx}
+\setbeamercovered{transparent}
+\usepackage{ragged2e}
+\usepackage{circuitikz}
+\justifying{
+
+\title{\textbf{3. Overlapping Generations Model (OLG)}}
+\subtitle{Advanced Macroeconomics}
+\author[Daniel Kelly (Colmex)]{Daniel Kelly}
+\institute[Colmex]{El Colegio de México}
+\date{Winter 2024}
+
+\begin{document}
+%% Title page
+%% Remove '[plain]' if you need a footline
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+{
+\begin{frame}[plain]
+    \frametitle{Outline}
+    \tableofcontents
+\end{frame}
+}
+
+\begin{frame}[plain]
+\textbf{Reading:} Romer (2012), \textit{Advanced Macroeconomics}, Chapter 2: Part B.
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Introduction}
+
+\end{frame}
+
+\section{The Diamond Overlaping Generations Model}
+
+
+
+\subsection{Household Preferences}
+\begin{frame}{Household Preferences}
+Households that belong to cohort $t$ (born on $t$) have an \alert{additively separable} utility function between consumption in both periods given by:
+\eq{U(c_{t},c_{t+1})=u(c_t)+\beta u(c_{t+1})}
+\pause
+The preferences for consumption on each period, summarized by the utility function $u(\cdot)$ (that is twice differentiable) and:
+\begin{itemize}
+\item \textbf{Risk Aversity}, so that $u(\cdot)$ is concave and, in particular $u''(x)<0$, $\forall x$.
+\item \textbf{Strictly Monotonic}, so that $u(\cdot)$ is strictly increasing, and in particular $u'(x)>0$, $\forall x$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+The \alert{discount factor} $\beta$, as usual, is defined as:
+\eq{\beta\equiv\dfrac{1}{1+\rho}} 
+\pause
+Where $\rho$ is the \alert{discount rate}, that shows the differences in valuation of consumption for the individual across different periods:
+\begin{itemize}
+\item If $\rho>0$, the individual places a \green{greater weight on first period consumption} $\Rightarrow$ $\beta<1$.
+\item If $\rho<0$, the individual places a \green{greater weight on second period consumption} $\Rightarrow$ $\beta>1$.
+\end{itemize}
+\bigskip
+\pause
+Furthermore, we assume that $\rho>-1$, so that the weight put on second period consumption is positive. \\
+\end{frame}
+
+\begin{frame}
+A \alert{balanced growth path} (Backward Induction) requires the assumption that the individual period utility function $u(\cdot)$ takes the CRRA (\textit{Constant Relative Risk Aversion}) form:
+\eq{U(c_{t},c_{t+1})=\dfrac{c_t^{1-\theta}}{1-\theta}+\beta\cdot \dfrac{c_{t+1}^{1-\theta}}{1-\theta}}
+\pause
+In regards to \alert{population dynamics}, the number of young people (this is, those who are born) at period $t$ is denoted $L_t$, and we assume that population grows at a constant rate $n$:
+\eq{L_t=(1+n)L_{t-1}}
+\end{frame}
+
+\subsection{Capital and Production}
+\begin{frame}{Capital and Production}
+Output is \alert{homogeneous}, and can be used either for consumption or investment. Capital is owned by households and is rented out to firms.\\
+\bigskip
+The whole economy is characterized by three perfectly competitive markets:
+\begin{enumerate}
+\item Market for Output (in which there are zero profits).
+\item Labor Market (in which labor earns exactly its marginal product).
+\item Capital Market (in which the rental price of capital is equalized to its marginal product).
+\end{enumerate}
+\pause
+\bigskip
+We assume that there is \alert{full capital depreciation} to make the calculations easier (so that $\delta=1$).
+\end{frame}
+
+\begin{frame}
+Production is characterized by an \green{aggregate neoclassical production function} with labor augmenting technological progress:
+\eq{Y_t=F(K_t,A_tL_t)}
+\pause
+Technological progress, grows at a constant rate $g$ and its dynamic is described by the difference equation:
+\eq{A_t=(1+g)A_{t-1}}
+\end{frame}
+
+\begin{frame}
+Each household only works when they are young, and they provide, inelastically, 1 unit of labor. The wage in the labor market is equal to the marginal product of effective labor:
+\eq{W_t=\pd{F(K_t,A_tL_t)}{A_tL_t}=\pd{F(K_t,A_tL_t)}{L_t}\cdot A_t=w_tA_t}
+\end{frame}
+
+\subsection{Solution of the Model}
+
+\begin{frame}{Summary of the Setup}
+\begin{itemize}
+\item In period $t$, capital supplied by the \textbf{old} and labor from the \textbf{young} are combined to produce output.
+\item The \textbf{old} consume the gains from capital and their existing wealth, then die and exit the model.
+\item The \textbf{young} divide their capital between consumption and savings for the next period (when they become \textit{old}).
+\item Capital stock in period $t+1$ is equal to the savings by the young on period $t$ times the amount of young households:
+\eq{K_{t+1}=L_t(A_tw_t-c_t)}
+\item Capital is then combined with the labor supply of the following generation to produce output in period $t+1$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\textbf{Figure 3.1:} Structure of the Diamond Overlapping Generations Model \\
+\bigskip
+\resizebox{0.7\columnwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [->, >=Stealth] (1.5,14.25) -- (11.5,14.25);
+\draw [short] (6.75,14.5) -- (6.75,14);
+\draw [short] (2,14.5) -- (2,14);
+\draw [short] (10.5,14.5) -- (10.5,14);
+\node [font=\normalsize] at (2,14.75) {$t-1$};
+\node [font=\normalsize] at (6.75,14.75) {$t$};
+\node [font=\normalsize] at (10.5,14.75) {$t+1$};
+\draw [, dashed] (1.25,12) rectangle  (7.5,11.25);
+\node [font=\normalsize] at (1,13) {(...)};
+\node [font=\normalsize] at (2,13) {Old};
+\node [font=\normalsize] at (6.75,11.75) {Old};
+\node [font=\normalsize] at (6.75,10.5) {Young};
+\node [font=\normalsize] at (2,11.75) {Young};
+\draw [dashed] (1.25,13.25) -- (2.5,13.25);
+\draw [dashed] (2.5,13.25) -- (2.5,12.5);
+\draw [dashed] (2.5,12.5) -- (1.25,12.5);
+\node [font=\normalsize] at (10.5,10.5) {Old};
+\draw [dashed] (10,9.5) -- (10,8.75);
+\draw [dashed] (10,8.75) -- (11.25,8.75);
+\draw [dashed] (10,9.5) -- (11.25,9.5);
+\node [font=\normalsize] at (10.75,9.25) {Young};
+\draw [, dashed] (5.75,10.75) rectangle  (11.25,10);
+\draw [ color={rgb,255:red,255; green,38; blue,0} , rounded corners = 10.8, ] (5.5,9.75) rectangle (8,15.25);
+\node [font=\normalsize] at (3.25,7.75) {\textbf{Young}};
+\node [font=\normalsize] at (9.5,7.5) {\textbf{Old}};
+\node [font=\normalsize] at (3.25,7.25) {- Income: $A_tw_t$};
+\node [font=\normalsize] at (3.25,6.75) {- Consumption: $c_t$};
+\node [font=\normalsize] at (3.25,6.25) {- Savings: $A_tw_t-c_t$};
+\node [font=\normalsize] at (9.5,7) {- Consumption: };
+\node [font=\normalsize] at (9.5,6.5) {$R_{t+1}\cdot K_{t+1} = R_t\cdot L_t(A_t-c_t)$};
+\draw [rounded corners = 10.8] (0,16) rectangle (13.25,5);
+\end{circuitikz}
+%
+}
+\end{center}
+\end{frame}
+
+\begin{frame}{Problem of Firms}
+
+\end{frame}
+
+\section{Model with Log Utility and Cobb-Douglas Tech.}
+
+\section{Policy Experiments}
+
+\section{Capital Accumulation and Dynamic Inefficiency}
+
+\section{Macroeconomics of Pensions}
+\begin{frame}
+sadas
+\end{frame}
+
+%% Final page
+\begin{frame}[plain]
+    \begin{picture}(0,0)
+        \put(-21.5, -164){\includegraphics[width=\paperwidth]{Imágenes/final_page_bg.png}}
+    \end{picture}
+\end{frame}
+
+\end{document}

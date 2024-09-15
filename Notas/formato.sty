@@ -1,0 +1,162 @@
+\textheight=22cm
+\textwidth=16cm
+\topmargin=-1cm
+\oddsidemargin=0cm
+\setlength\parindent{0pt}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage[fleqn]{amsmath} 
+\usepackage{multicol}
+\usepackage{marginnote}
+\usepackage{stackengine}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{lipsum}
+\usepackage{titlesec}
+\usepackage{ragged2e}
+
+\usepackage{fncychap}
+
+\tcbuselibrary{breakable}
+
+\usepackage{fancyhdr}
+
+\tcbuselibrary{skins,breakable}
+\usetikzlibrary{shadings,shadows}
+\definecolor{ejemplo}{RGB}{194, 31, 48}
+\definecolor{definición}{RGB}{21, 67, 174}
+\definecolor{block}{HTML}{378518}
+\definecolor{background}{RGB}{255, 255, 255}
+\definecolor{azul}{HTML}{2264EA}
+
+\newtcolorbox[auto counter,number within=chapter]{ex}[2][]{colback=ejemplo!5!white,colframe=ejemplo!75!black,fonttitle=\bfseries, title=Example~\thetcbcounter: #2,#1,breakable}
+
+\newtcolorbox[auto counter,number within=chapter]{defi}[2][]{colback=definición!5!white,colframe=definición!75!black,fonttitle=\bfseries, title=Definition~\thetcbcounter: #2,#1,breakable}
+
+\newtcolorbox[auto counter,number within=chapter]{theo}[2][]{colback=block!5!white,colframe=block!75!black,fonttitle=\bfseries, title=Theorem~\thetcbcounter: #2,#1,breakable}
+
+\newtcolorbox[auto counter,number within=chapter]{lema}[2][]{colback=block!5!white,colframe=block!75!black,fonttitle=\bfseries, title=Lema~\thetcbcounter: #2,#1,breakable}
+
+\newtcolorbox[auto counter,number within=chapter]{assumption}[2][]{colback=yellow!5!white,colframe=yellow!75!black,fonttitle=\bfseries, title=Assumption~\thetcbcounter: #2,#1,breakable}
+
+\newcommand\pd[2]{\dfrac{\partial #1}{\partial #2}}
+
+\newcommand\dsum[2]{\displaystyle\sum_{#1}^{#2}}
+
+\newcommand\mn[1]{\mathbf{#1}}
+
+\newcommand\plim[1]{plim\left[#1\right]}
+
+\newcommand\hbeta[1]{\hat{\beta_{#1}}}
+\newcommand\hdelta[1]{\hat{\delta_{#1}}}
+
+\newcommand\un[2]{\underset{#2}{#1}}
+
+\newcommand\blue[1]{{\color{Cerulean}{#1}}}
+\newcommand\orange[1]{{\color{RedOrange}{#1}}}
+\newcommand\green[1]{{\color{ForestGreen}{#1}}}
+
+\newcommand\ols[1]{{\color{Cerulueon}{OLS#1}}}
+\newcommand\iv[1]{{\color{Ceruleon}{IV#1}}}
+\newcommand\stata[1]{\textbf{\color{red}{Comando Stata:}} \textit{#1}}
+
+\newcommand\eq[1]{\begin{equation}
+#1
+\end{equation}}
+
+\usepackage[T1]{fontenc}
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+
+\newcommand{\hsp}{\hspace{10pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[R]{\textbf{\leftmark}}
+\fancyfoot[C]{\thepage}
+
+\renewcommand{\chaptermark}[1]{%
+  \markboth{\thechapter.\space#1}{}%
+}
+
+\newcommand\E[1]{E\left[#1\right]}
+\newcommand\Var[1]{Var\left[ #1 \right]}
+\newcommand\Cov[1]{Cov\left[ #1 \right]}
+
+\newcommand\X[0]{\mn{X}}
+\newcommand\x[0]{\mn{x}}
+\newcommand\Y[0]{\mn{Y}}
+\newcommand\y[0]{\mn{y}}
+\newcommand\Z[0]{\mn{Z}}
+\newcommand\z[0]{\mn{z}}
+
+\renewcommand{\l}[0]{\lbrace}
+\renewcommand{\r}[0]{\rbrace}
+
+\newcommand\lp{\left(}
+\newcommand\rp{\right)}
+
+\newcommand\lb{\left[}
+\newcommand\rb{\right]}
+
+\newcommand\definition[2]{
+	\begin{defi}{#1}
+		#2
+	\end{defi}
+}
+
+\newcommand\example[2]{
+	\begin{ex}{#1}
+		#2
+	\end{ex}
+}
+
+\newcommand\theorem[2]{
+	\begin{theo}{#1}
+		#2
+	\end{theo}
+}
+
+\newcommand\lem[2]{
+	\begin{lema}{#1}
+		#2
+	\end{lema}
+}
+
+\newcommand\assu[2]{
+	\begin{assumption}{#1}
+		#2
+	\end{assumption}
+}
+
+\renewcommand{\L}[0]{\mathcal{L}}
+\renewcommand{\l}{\lambda}
+
+\tcbset{
+    equilibrium/.style={
+        colback=red!10, % light red background
+        colframe=BrickRed,  % red border
+        width=\textwidth, % width is 0.9 times the text width
+        boxrule=0.5mm, % border thickness (optional, adjust as needed)
+        halign=center, % horizontal alignment
+        valign=center, % vertical alignment
+        enhanced, % enable advanced options
+        before=\justifying, % justify text inside the box
+    }
+}
+
+\newcommand\equilibrium[2]{
+\begin{tcolorbox}[equilibrium]
+    \textbf{#1} \\
+    #2
+\end{tcolorbox}
+}
+
+
+
