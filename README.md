@@ -12,4 +12,4 @@ These notes are divided into 3 sections:
 - **Part 3** (Sections 10 to 13) focuses on Open Economies, developing 4 intertemporal models concentrated on international trade, national accounts, and international financial asset markets.
 
 
-The content is intended to be self-contained, so most of the advanced mathematical tools required to derive conclusions from the models are detailed within the text itself. However, being aimed at advanced students, we assume familiarity with the basic tools of multivariable integral and differential calculus. Finally, the reader can address any questions related to these notes to the email: \textit{djsanchez@colmex.mx}.
+The content is intended to be self-contained, so most of the advanced mathematical tools required to derive conclusions from the models are detailed within the text itself. However, being aimed at advanced students, we assume familiarity with the basic tools of multivariable integral and differential calculus. Finally, the reader can address any questions related to these notes to the email: djsanchez@colmex.mx.
