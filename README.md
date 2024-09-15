@@ -1,3 +1,5 @@
+# Advanced Macroeconomics
+
 This set of notes contains a detailed description -though definitely not extensive— of the main models used in modern macroeconomics. We cover almost all mathematical developments in detail, so that the reader can acquire a general perspective on how these models (and more advanced ones) are solved. Our primary objective is to offer Spanish-speaking students in the final year of their economics degree a resource not available in our language, which can serve to deepen or approach the study of macroeconomics. 
 
 We generally rely on two sources. On the one hand, the book _Advanced Macroeconomics_ by David Romer (2012), the central text in most intermediate-advanced level courses. Particularly in the final sections, we make use of other texts, although it is explicitly indicated when this is not the case. Secondly, and more importantly, the material used by Dr. Stephen McKnight for the course _Advanced Macroeconomics_, of the 4th year of the Bachelor's Degree in Economics from the Center for Economic Studies of El Colegio de México. 
